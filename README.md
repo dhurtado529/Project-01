@@ -64,14 +64,14 @@ This document contains the following details:
 The main purpose of this network is to expose a load-balanced and monitored instance of DVWA, the D*mn Vulnerable Web Application.
 
 Load balancing ensures that the application will be highly availble, in addition to restricting access to the network.
-- _TODO: What aspect of security do load balancers protect? What is the advantage of a jump box?_
-    Load balancers do exactly what they are named as: balance the incoming traffic and distribute it amongst the resource it is assigned to. They protect the availability of our assets, in this case the webservers. By distributing requests between the servers, we can ensure that these servers won't be inundated with requests and taking them offline. 
+- _What aspect of security do load balancers protect? What is the advantage of a jump box?_
+    Load balancers do exactly what they are named as: balance the incoming traffic and distribute it amongst the resources it is assigned to. They protect the availability of our assets, in this case the webservers. By distributing requests between the servers, we can ensure that these servers won't be inundated with requests that may take them offline. 
 
 Integrating an ELK server allows users to easily monitor the vulnerable VMs for changes to the logs and system traffic.
 - _TODO: What does Filebeat watch for?_
-    Log and file locations, and collects log events.
+   - Log and file locations, and collects log events.
 - _TODO: What does Metricbeat record?_
-    Gathers metric and statistical data from OS and services.
+   - Gathers metric and statistical data from OS and services.
 
 
 The configuration details of each machine may be found below.
@@ -101,16 +101,16 @@ A summary of the access policies in place can be found in the table below.
 | Jump-Box Provisioner |         Yes         |    76.16.226.102   |
 |         Web 1        |          No         |      10.0.0.4      |
 |         Web 2        |     DVWA Server     |      10.0.0.4      |
-|         ELKvm        |    ELK Stack Host   |      10.1.0.4      |
+|         ELKvm        |    ELK Stack Host   |      10.0.0.4      |
 
 ### Elk Configuration
 
 Ansible was used to automate configuration of the ELK machine. No configuration was performed manually, which is advantageous because...
-- _TODO: What is the main advantage of automating configuration with Ansible?_
-  When using Ansible playbooks, your solution becomes scalable and ensures consistency across multiple machines. Since the configuration is automated from one playbook, you can deploy as many as you need to quickly with no error (so long as your playbook is written correctly.)
+- _What is the main advantage of automating configuration with Ansible?_
+   - When using Ansible playbooks, your solution becomes scalable and ensures consistency across multiple machines. Since the configuration is automated from one playbook, you can deploy as many as you need to quickly with no error (so long as your playbook is written correctly.)
 
 The playbook implements the following tasks:
-- _TODO: In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
+- _In 3-5 bullets, explain the steps of the ELK installation play. E.g., install Docker; download image; etc._
 - ... First: docker.io is installed via apt-get 
 - ... Second: python3-pip is installed via apt-get
 - ... Third: Docker Module is installed via pip
@@ -123,7 +123,7 @@ The following screenshot displays the result of running `docker ps` after succes
 
 ### Target Machines & Beats
 This ELK server is configured to monitor the following machines:
-- _TODO: List the IP addresses of the machines you are monitoring_
+- _List the IP addresses of the machines you are monitoring_
   Web 1 10.0.0.5
   Web 2 10.0.0.6
 
